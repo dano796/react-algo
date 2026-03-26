@@ -14,15 +14,15 @@
         },
         {
           "source": "src/engines/flowCurrents.ts",
-          "target": "lib/backgrounds/engines/flowCurrents.ts"
+          "target": "components/engines/flowCurrents.ts"
         },
         {
           "source": "src/utils/noise.ts",
-          "target": "lib/backgrounds/utils/noise.ts"
+          "target": "components/utils/noise.ts"
         },
         {
           "source": "src/schemas/index.ts",
-          "target": "lib/backgrounds/schemas/index.ts"
+          "target": "components/schemas/index.ts"
         }
       ]
     },
@@ -38,15 +38,15 @@
         },
         {
           "source": "src/engines/gravityStorm.ts",
-          "target": "lib/backgrounds/engines/gravityStorm.ts"
+          "target": "components/engines/gravityStorm.ts"
         },
         {
           "source": "src/utils/noise.ts",
-          "target": "lib/backgrounds/utils/noise.ts"
+          "target": "components/utils/noise.ts"
         },
         {
           "source": "src/schemas/index.ts",
-          "target": "lib/backgrounds/schemas/index.ts"
+          "target": "components/schemas/index.ts"
         }
       ]
     },
@@ -62,15 +62,15 @@
         },
         {
           "source": "src/engines/geoPulse.ts",
-          "target": "lib/backgrounds/engines/geoPulse.ts"
+          "target": "components/engines/geoPulse.ts"
         },
         {
           "source": "src/utils/noise.ts",
-          "target": "lib/backgrounds/utils/noise.ts"
+          "target": "components/utils/noise.ts"
         },
         {
           "source": "src/schemas/index.ts",
-          "target": "lib/backgrounds/schemas/index.ts"
+          "target": "components/schemas/index.ts"
         }
       ]
     },
@@ -86,15 +86,15 @@
         },
         {
           "source": "src/engines/waveEther.ts",
-          "target": "lib/backgrounds/engines/waveEther.ts"
+          "target": "components/engines/waveEther.ts"
         },
         {
           "source": "src/utils/noise.ts",
-          "target": "lib/backgrounds/utils/noise.ts"
+          "target": "components/utils/noise.ts"
         },
         {
           "source": "src/schemas/index.ts",
-          "target": "lib/backgrounds/schemas/index.ts"
+          "target": "components/schemas/index.ts"
         }
       ]
     }
