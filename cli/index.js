@@ -14,6 +14,7 @@
 import fs from "fs";
 import path from "path";
 import https from "https";
+import "dotenv/config";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Config
@@ -21,11 +22,11 @@ import https from "https";
 
 const REGISTRY_URL =
   process.env.KINETIC_ARCANA_REGISTRY ||
-  "https://raw.githubusercontent.com/your-org/kinetic-arcana/main/cli/registry.json";
+  "https://raw.githubusercontent.com/dano796/alg-art-backgrounds/main/cli/registry.json";
 
 const BASE_URL =
   process.env.KINETIC_ARCANA_BASE_URL ||
-  "https://raw.githubusercontent.com/your-org/kinetic-arcana/main";
+  "https://raw.githubusercontent.com/dano796/alg-art-backgrounds/main";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Helpers

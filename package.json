@@ -46,5 +46,8 @@
     "cli",
     "src"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
 }
