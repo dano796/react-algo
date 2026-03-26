@@ -1,0 +1,50 @@
+{
+  "name": "kinetic-arcana",
+  "version": "0.1.0",
+  "description": "Algorithmic art backgrounds as copy-paste-ready React components — shadcn/ui style.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "kinetic-arcana": "./cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.0"
+  },
+  "keywords": [
+    "react",
+    "canvas",
+    "animation",
+    "generative-art",
+    "algorithmic",
+    "background",
+    "particles",
+    "perlin-noise",
+    "webgl",
+    "shadcn"
+  ],
+  "files": [
+    "dist",
+    "cli",
+    "src"
+  ],
+  "license": "MIT"
+}

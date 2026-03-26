@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "baseUrl": "https://raw.githubusercontent.com/your-org/kinetic-arcana/main",
+  "components": [
+    {
+      "id": "flow-currents",
+      "name": "Flow Currents",
+      "description": "Thousands of particles trace Perlin noise vector fields forming organic density maps.",
+      "tags": ["particles", "noise", "flow", "organic"],
+      "files": [
+        {
+          "source": "src/components/FlowCurrents.tsx",
+          "target": "components/backgrounds/FlowCurrents.tsx"
+        },
+        {
+          "source": "src/engines/flowCurrents.ts",
+          "target": "lib/backgrounds/engines/flowCurrents.ts"
+        },
+        {
+          "source": "src/utils/noise.ts",
+          "target": "lib/backgrounds/utils/noise.ts"
+        },
+        {
+          "source": "src/schemas/index.ts",
+          "target": "lib/backgrounds/schemas/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "gravity-storm",
+      "name": "Gravity Storm",
+      "description": "Multiple gravitational attractors pull a particle swarm into complex orbital dance.",
+      "tags": ["particles", "physics", "gravity", "orbits"],
+      "files": [
+        {
+          "source": "src/components/GravityStorm.tsx",
+          "target": "components/backgrounds/GravityStorm.tsx"
+        },
+        {
+          "source": "src/engines/gravityStorm.ts",
+          "target": "lib/backgrounds/engines/gravityStorm.ts"
+        },
+        {
+          "source": "src/utils/noise.ts",
+          "target": "lib/backgrounds/utils/noise.ts"
+        },
+        {
+          "source": "src/schemas/index.ts",
+          "target": "lib/backgrounds/schemas/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "geo-pulse",
+      "name": "Geo Pulse",
+      "description": "Nested parametric polygons rotating at prime-ratio angular velocities.",
+      "tags": ["geometric", "polygons", "rotation", "mathematical"],
+      "files": [
+        {
+          "source": "src/components/GeoPulse.tsx",
+          "target": "components/backgrounds/GeoPulse.tsx"
+        },
+        {
+          "source": "src/engines/geoPulse.ts",
+          "target": "lib/backgrounds/engines/geoPulse.ts"
+        },
+        {
+          "source": "src/utils/noise.ts",
+          "target": "lib/backgrounds/utils/noise.ts"
+        },
+        {
+          "source": "src/schemas/index.ts",
+          "target": "lib/backgrounds/schemas/index.ts"
+        }
+      ]
+    },
+    {
+      "id": "wave-ether",
+      "name": "Wave Ether",
+      "description": "Sine waves from multiple drifting sources interfere to create standing waves and moiré patterns.",
+      "tags": ["waves", "interference", "sine", "pixel"],
+      "files": [
+        {
+          "source": "src/components/WaveEther.tsx",
+          "target": "components/backgrounds/WaveEther.tsx"
+        },
+        {
+          "source": "src/engines/waveEther.ts",
+          "target": "lib/backgrounds/engines/waveEther.ts"
+        },
+        {
+          "source": "src/utils/noise.ts",
+          "target": "lib/backgrounds/utils/noise.ts"
+        },
+        {
+          "source": "src/schemas/index.ts",
+          "target": "lib/backgrounds/schemas/index.ts"
+        }
+      ]
+    }
+  ]
+}

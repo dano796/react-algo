@@ -1,0 +1,94 @@
+import { useEffect, useRef, CSSProperties } from "react";
+import {
+  initGravityStorm,
+  drawGravityStorm,
+  resetGravityStorm,
+  type GravityStormState,
+} from "../engines/gravityStorm";
+import type { GravityStormParams } from "../schemas";
+import { gravityStormDefaults } from "../schemas";
+
+export interface GravityStormProps extends GravityStormParams {
+  className?: string;
+  style?: CSSProperties;
+}
+
+/**
+ * GravityStorm — n-body attractor particle system background.
+ *
+ * @example
+ * <GravityStorm
+ *   attractors={4}
+ *   gravity={1.2}
+ *   colorCore="#ff6b35"
+ *   colorTrail="#7b5ea7"
+ *   style={{ position: "absolute", inset: 0 }}
+ * />
+ */
+export function GravityStorm(props: GravityStormProps) {
+  const { className, style, ...params } = props;
+  const merged = { ...gravityStormDefaults, ...params };
+
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const stateRef = useRef<GravityStormState | null>(null);
+  const paramsRef = useRef(merged);
+  paramsRef.current = merged;
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let animId: number;
+    let running = true;
+
+    function resizeCanvas() {
+      const w = canvas!.clientWidth * window.devicePixelRatio;
+      const h = canvas!.clientHeight * window.devicePixelRatio;
+      if (canvas!.width !== w || canvas!.height !== h) {
+        canvas!.width = w;
+        canvas!.height = h;
+        ctx!.fillStyle = "rgb(8,6,18)";
+        ctx!.fillRect(0, 0, w, h);
+        stateRef.current = initGravityStorm(w, h, paramsRef.current);
+      }
+    }
+
+    resizeCanvas();
+    stateRef.current = initGravityStorm(canvas.width, canvas.height, paramsRef.current);
+
+    const loop = () => {
+      if (!running) return;
+      if (stateRef.current) {
+        drawGravityStorm(ctx, stateRef.current, paramsRef.current);
+      }
+      animId = requestAnimationFrame(loop);
+    };
+    animId = requestAnimationFrame(loop);
+
+    const ro = new ResizeObserver(resizeCanvas);
+    ro.observe(canvas);
+
+    return () => {
+      running = false;
+      cancelAnimationFrame(animId);
+      ro.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx || !stateRef.current) return;
+    stateRef.current = resetGravityStorm(ctx, stateRef.current, merged);
+  }, [merged.seed, merged.count, merged.attractors]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className={className}
+      style={{ display: "block", width: "100%", height: "100%", ...style }}
+    />
+  );
+}
