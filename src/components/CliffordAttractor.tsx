@@ -3,7 +3,7 @@
  * Strange attractor density visualization
  */
 
-import { useEffect, useRef, CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import {
   initCliffordAttractor,
   drawCliffordAttractor,

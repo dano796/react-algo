@@ -62,7 +62,7 @@ export function drawHarmonicLattice(
   state: HarmonicLatticeState,
   params: HarmonicLatticeParams
 ): void {
-  const { modes, time, width, height } = state;
+  const { modes, time, width } = state;
   const resolution = params.resolution;
   const cellSize = width / resolution;
 

@@ -3,7 +3,7 @@
  * Moving seed points creating dynamic Voronoi tessellation
  */
 
-import { SeededRandom, lerp } from "../utils/noise";
+import { SeededRandom } from "../utils/noise";
 
 export interface VoronoiMosaicParams {
   seed: number;

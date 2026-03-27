@@ -96,7 +96,7 @@ export function drawFractalNoiseTerrain(
   state: FractalNoiseTerrainState,
   params: FractalNoiseTerrainParams
 ): void {
-  const { noise, width, height } = state;
+  const { noise, width } = state;
   const resolution = params.resolution;
   const cellSize = width / resolution;
 

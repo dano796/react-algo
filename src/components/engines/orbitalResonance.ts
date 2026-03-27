@@ -3,7 +3,7 @@
  * Bodies orbit at resonant period ratios creating harmonic patterns
  */
 
-import { SeededRandom, hexToRgb, rgba, lerp } from "../utils/noise";
+import { SeededRandom, hexToRgb, rgba } from "../utils/noise";
 
 export interface OrbitalResonanceParams {
   seed: number;

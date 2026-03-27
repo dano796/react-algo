@@ -7,7 +7,7 @@
  * No external UI library dependencies — inline styles only.
  */
 
-import { useState, useCallback, CSSProperties } from "react";
+import { useState, useCallback, type CSSProperties } from "react";
 import { FlowCurrents } from "./FlowCurrents";
 import { GravityStorm } from "./GravityStorm";
 import { GeoPulse } from "./GeoPulse";
@@ -79,29 +79,6 @@ import {
   voronoiMosaicSchema,
   voronoiMosaicDefaults,
   type ParamSchema,
-  type FlowCurrentsParams,
-  type GravityStormParams,
-  type GeoPulseParams,
-  type WaveEtherParams,
-  type VortexBloomParams,
-  type CrystallineDriftParams,
-  type AmbientMeshParams,
-  type EmberCascadeParams,
-  type CliffordAttractorParams,
-  type HarmonicLatticeParams,
-  type LissajousWeaveParams,
-  type PhyllotaxisDreamParams,
-  type SpirographParams,
-  type DifferentialGrowthParams,
-  type DoublePendulumParams,
-  type FractalNoiseTerrainParams,
-  type MoireLatticeParams,
-  type NeuralWeaveParams,
-  type OrbitalResonanceParams,
-  type ReactionDiffusionParams,
-  type RecursiveSubdivisionParams,
-  type TideHarmonicsParams,
-  type VoronoiMosaicParams,
 } from "./schemas";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -116,8 +93,7 @@ interface BackgroundEntry {
   label: string;
   schema: ParamSchema[];
   defaults: AnyParams;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Component: React.ComponentType<any>;
+  Component: (props: any) => JSX.Element;
   description: string;
   installId: string;
 }

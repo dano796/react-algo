@@ -3,7 +3,7 @@
  * Harmonic phase tapestry
  */
 
-import { useEffect, useRef, CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import {
   initLissajousWeave,
   drawLissajousWeave,

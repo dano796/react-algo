@@ -147,7 +147,7 @@ export function drawDifferentialGrowth(
   state: DifferentialGrowthState,
   params: DifferentialGrowthParams
 ): void {
-  const { nodes, noise, gFrame, width, height } = state;
+  const { noise, gFrame, width, height } = state;
 
   // Clear or fade background
   if (state.needsClear) {

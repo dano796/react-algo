@@ -3,7 +3,7 @@
  * Two-dimensional standing wave interference patterns
  */
 
-import { useEffect, useRef, CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import {
   initHarmonicLattice,
   drawHarmonicLattice,
