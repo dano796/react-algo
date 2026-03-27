@@ -577,9 +577,35 @@ export function BackgroundStudio() {
         }}
       >
         {/* Header */}
-        <div style={{ padding: "20px 20px 16px" }}>
-          <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 2 }}>Background Studio</div>
-          <div style={{ fontSize: 11, color: T.muted }}>alg-art-backgrounds</div>
+        <div style={{ padding: "20px 20px 16px", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+          <div>
+            <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 2 }}>Background Studio</div>
+            <div style={{ fontSize: 11, color: T.muted }}>alg-art-backgrounds</div>
+          </div>
+          <a
+            href="/"
+            style={{
+              textDecoration: "none",
+              color: T.muted,
+              fontSize: 11,
+              fontWeight: 500,
+              background: "#e8855a",
+              padding: "4px 8px",
+              borderRadius: 4,
+              border: `1px solid ${T.border}`,
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = T.text;
+              e.currentTarget.style.background = "#e8855a";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = T.muted;
+              e.currentTarget.style.background = "#e8855a";
+            }}
+          >
+            Home
+          </a>
         </div>
 
         <div style={{ borderBottom: `1px solid ${T.border}` }} />

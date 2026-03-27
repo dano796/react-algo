@@ -65,10 +65,10 @@ export function HeroSection() {
         {/* CTA buttons */}
         <div className="hero-ctas flex gap-3 justify-center flex-wrap mb-7">
           <a
-            href="/tools"
+            href="/Studio"
             onClick={(e) => {
               e.preventDefault();
-              window.history.pushState({}, "", "/tools");
+              window.history.pushState({}, "", "/Studio");
               window.dispatchEvent(new PopStateEvent("popstate"));
             }}
             className="px-[30px] py-[13px] bg-accent border-none rounded-[10px] text-white text-[15px] font-bold cursor-pointer font-display tracking-[0.01em] hover:opacity-90 transition-opacity no-underline inline-block"

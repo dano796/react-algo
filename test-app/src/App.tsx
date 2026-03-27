@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
   // Simple client-side routing
-  if (currentPath === "/tools") {
+  if (currentPath === "/Studio") {
     return <StudioPage />;
   }
 

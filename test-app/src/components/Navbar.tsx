@@ -42,7 +42,7 @@ export function Navbar() {
 
       {/* Nav links */}
       <div className="flex items-center gap-0.5">
-        <NavLink href="/tools">Studio</NavLink>
+        <NavLink href="/Studio">Studio</NavLink>
         <NavLink href="/#gallery">Gallery</NavLink>
         <NavLink href="/#docs">Docs</NavLink>
         <a
