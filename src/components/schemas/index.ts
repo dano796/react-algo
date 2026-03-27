@@ -21,6 +21,38 @@ export type { CrystallineDriftParams } from "../CrystallineDrift";
 export { crystallineDriftDefaults } from "../CrystallineDrift";
 export type { AmbientMeshParams } from "../AmbientMesh";
 export { ambientMeshDefaults } from "../AmbientMesh";
+export type { EmberCascadeParams } from "../EmberCascade";
+export { emberCascadeDefaults } from "../EmberCascade";
+export type { CliffordAttractorParams } from "../CliffordAttractor";
+export { cliffordAttractorDefaults } from "../CliffordAttractor";
+export type { HarmonicLatticeParams } from "../HarmonicLattice";
+export { harmonicLatticeDefaults } from "../HarmonicLattice";
+export type { LissajousWeaveParams } from "../LissajousWeave";
+export { lissajousWeaveDefaults } from "../LissajousWeave";
+export type { PhyllotaxisDreamParams } from "../PhyllotaxisDream";
+export { phyllotaxisDreamDefaults } from "../PhyllotaxisDream";
+export type { SpirographParams } from "../Spirograph";
+export { spirographDefaults } from "../Spirograph";
+export type { DifferentialGrowthParams } from "../engines/differentialGrowth";
+export { differentialGrowthDefaults } from "../DifferentialGrowth";
+export type { DoublePendulumParams } from "../engines/doublePendulum";
+export { doublePendulumDefaults } from "../DoublePendulum";
+export type { FractalNoiseTerrainParams } from "../engines/fractalNoiseTerrain";
+export { fractalNoiseTerrainDefaults } from "../FractalNoiseTerrain";
+export type { MoireLatticeParams } from "../engines/moireLattice";
+export { moireLatticeDefaults } from "../MoireLattice";
+export type { NeuralWeaveParams } from "../engines/neuralWeave";
+export { neuralWeaveDefaults } from "../NeuralWeave";
+export type { OrbitalResonanceParams } from "../engines/orbitalResonance";
+export { orbitalResonanceDefaults } from "../OrbitalResonance";
+export type { ReactionDiffusionParams } from "../engines/reactionDiffusion";
+export { reactionDiffusionDefaults } from "../ReactionDiffusion";
+export type { RecursiveSubdivisionParams } from "../engines/recursiveSubdivision";
+export { recursiveSubdivisionDefaults } from "../RecursiveSubdivision";
+export type { TideHarmonicsParams } from "../engines/tideHarmonics";
+export { tideHarmonicsDefaults } from "../TideHarmonics";
+export type { VoronoiMosaicParams } from "../engines/voronoiMosaic";
+export { voronoiMosaicDefaults } from "../VoronoiMosaic";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ParamSchema — drives BackgroundStudio UI controls and code-gen
@@ -178,4 +210,285 @@ export const ambientMeshSchema: ParamSchema[] = [
   { name: "bgColor",            label: "Background",          type: "color",  default: "#0a0e14" },
   { name: "nodeColor",          label: "Nodes",               type: "color",  default: "#50b8e8" },
   { name: "edgeColor",          label: "Edges",               type: "color",  default: "#50b8e8" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// EMBER CASCADE
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const emberCascadeSchema: ParamSchema[] = [
+  { name: "seed",          label: "Seed",           type: "number", default: 42731, min: 1,    max: 999999, step: 1    },
+  { name: "particleCount", label: "Particle Count", type: "number", default: 800,   min: 200,  max: 2000,   step: 100  },
+  { name: "sourceCount",   label: "Source Count",   type: "number", default: 3,     min: 1,    max: 8,      step: 1    },
+  { name: "riseSpeed",     label: "Rise Speed",     type: "number", default: 1.2,   min: 0.2,  max: 3.0,    step: 0.1  },
+  { name: "turbulence",    label: "Turbulence",     type: "number", default: 1.0,   min: 0.0,  max: 3.0,    step: 0.1  },
+  { name: "glowSize",      label: "Glow Size",      type: "number", default: 1.0,   min: 0.3,  max: 2.5,    step: 0.1  },
+  { name: "bgColor",       label: "Background",     type: "color",  default: "#0a0a0a" },
+  { name: "hotColor",      label: "Hot Color",      type: "color",  default: "#ffaa33" },
+  { name: "midColor",      label: "Mid Color",      type: "color",  default: "#ff5533" },
+  { name: "coolColor",     label: "Cool Color",     type: "color",  default: "#aa2233" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CLIFFORD ATTRACTOR
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const cliffordAttractorSchema: ParamSchema[] = [
+  { name: "seed",           label: "Seed",            type: "number", default: 42731, min: 1,     max: 999999, step: 1     },
+  { name: "pA",             label: "Parameter A",     type: "number", default: -1.4,  min: -2.5,  max: 2.5,    step: 0.1   },
+  { name: "pB",             label: "Parameter B",     type: "number", default: 1.6,   min: -2.5,  max: 2.5,    step: 0.1   },
+  { name: "pC",             label: "Parameter C",     type: "number", default: 1.0,   min: -2.5,  max: 2.5,    step: 0.1   },
+  { name: "pD",             label: "Parameter D",     type: "number", default: 0.7,   min: -2.5,  max: 2.5,    step: 0.1   },
+  { name: "pointsPerFrame", label: "Points/Frame",    type: "number", default: 8000,  min: 1000,  max: 20000,  step: 1000  },
+  { name: "brightness",     label: "Brightness",      type: "number", default: 1.0,   min: 0.1,   max: 3.0,    step: 0.1   },
+  { name: "bgColor",        label: "Background",      type: "color",  default: "#0a0a0a" },
+  { name: "colorA",         label: "Shadow Color",    type: "color",  default: "#1a1a2e" },
+  { name: "colorB",         label: "Light Color",     type: "color",  default: "#00d4ff" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HARMONIC LATTICE
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const harmonicLatticeSchema: ParamSchema[] = [
+  { name: "seed",          label: "Seed",           type: "number", default: 42731, min: 1,    max: 999999, step: 1    },
+  { name: "modeCount",     label: "Mode Count",     type: "number", default: 6,     min: 2,    max: 12,     step: 1    },
+  { name: "maxModeNumber", label: "Max Mode #",     type: "number", default: 5,     min: 2,    max: 10,     step: 1    },
+  { name: "baseFrequency", label: "Base Frequency", type: "number", default: 1.0,   min: 0.1,  max: 3.0,    step: 0.1  },
+  { name: "timeSpeed",     label: "Time Speed",     type: "number", default: 1.0,   min: 0.1,  max: 3.0,    step: 0.1  },
+  { name: "resolution",    label: "Resolution",     type: "number", default: 80,    min: 20,   max: 150,    step: 10   },
+  { name: "nodeThreshold", label: "Node Threshold", type: "number", default: 0.15,  min: 0.0,  max: 0.5,    step: 0.05 },
+  { name: "contrastPower", label: "Contrast Power", type: "number", default: 1.5,   min: 0.5,  max: 3.0,    step: 0.1  },
+  { name: "bgColor",       label: "Background",     type: "color",  default: "#0a0a0a" },
+  { name: "colorA",        label: "Color A",        type: "color",  default: "#ff6b35" },
+  { name: "colorB",        label: "Color B",        type: "color",  default: "#f7931e" },
+  { name: "colorC",        label: "Color C",        type: "color",  default: "#fdc830" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LISSAJOUS WEAVE
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const lissajousWeaveSchema: ParamSchema[] = [
+  { name: "seed",       label: "Seed",        type: "number", default: 42731, min: 1,   max: 999999, step: 1    },
+  { name: "curveCount", label: "Curve Count", type: "number", default: 12,    min: 3,   max: 30,     step: 1    },
+  { name: "freqMax",    label: "Max Freq",    type: "number", default: 5,     min: 2,   max: 10,     step: 1    },
+  { name: "radius",     label: "Radius",      type: "number", default: 180,   min: 50,  max: 350,    step: 10   },
+  { name: "phaseSpeed", label: "Phase Speed", type: "number", default: 1.0,   min: 0.1, max: 3.0,    step: 0.1  },
+  { name: "bgColor",    label: "Background",  type: "color",  default: "#0a0a0a" },
+  { name: "colorA",     label: "Color A",     type: "color",  default: "#ff6b35" },
+  { name: "colorB",     label: "Color B",     type: "color",  default: "#f7931e" },
+  { name: "colorC",     label: "Color C",     type: "color",  default: "#fdc830" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PHYLLOTAXIS DREAM
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const phyllotaxisDreamSchema: ParamSchema[] = [
+  { name: "seed",       label: "Seed",        type: "number", default: 42731, min: 1,    max: 999999, step: 1    },
+  { name: "numPoints",  label: "Point Count", type: "number", default: 800,   min: 200,  max: 2000,   step: 50   },
+  { name: "spread",     label: "Spread",      type: "number", default: 4.5,   min: 2.0,  max: 8.0,    step: 0.1  },
+  { name: "angleScale", label: "Angle Scale", type: "number", default: 1.0,   min: 0.95, max: 1.05,   step: 0.01 },
+  { name: "morph",      label: "Morph",       type: "number", default: 1.0,   min: 0.0,  max: 3.0,    step: 0.1  },
+  { name: "rotSpeed",   label: "Rot Speed",   type: "number", default: 1.0,   min: 0.1,  max: 3.0,    step: 0.1  },
+  { name: "dotSize",    label: "Dot Size",    type: "number", default: 6,     min: 2,    max: 15,     step: 0.5  },
+  { name: "bgColor",    label: "Background",  type: "color",  default: "#0a0a0a" },
+  { name: "colorA",     label: "Color A",     type: "color",  default: "#ff6b35" },
+  { name: "colorB",     label: "Color B",     type: "color",  default: "#f7931e" },
+  { name: "colorC",     label: "Color C",     type: "color",  default: "#fdc830" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SPIROGRAPH
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const spirographSchema: ParamSchema[] = [
+  { name: "seed",       label: "Seed",        type: "number", default: 42731, min: 1,   max: 999999, step: 1    },
+  { name: "R",          label: "Outer R",     type: "number", default: 120,   min: 50,  max: 200,    step: 5    },
+  { name: "r",          label: "Inner r",     type: "number", default: 45,    min: 10,  max: 100,    step: 5    },
+  { name: "d",          label: "Distance d",  type: "number", default: 70,    min: 10,  max: 150,    step: 5    },
+  { name: "speed",      label: "Speed",       type: "number", default: 1.0,   min: 0.1, max: 3.0,    step: 0.1  },
+  { name: "lineWeight", label: "Line Weight", type: "number", default: 1.2,   min: 0.5, max: 3.0,    step: 0.1  },
+  { name: "bgColor",    label: "Background",  type: "color",  default: "#0a0a0a" },
+  { name: "colorA",     label: "Color A",     type: "color",  default: "#ff6b35" },
+  { name: "colorB",     label: "Color B",     type: "color",  default: "#f7931e" },
+  { name: "colorC",     label: "Color C",     type: "color",  default: "#fdc830" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DIFFERENTIAL GROWTH
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const differentialGrowthSchema: ParamSchema[] = [
+  { name: "seed",          label: "Seed",           type: "number", default: 4242, min: 1,    max: 999999, step: 1    },
+  { name: "growthRate",    label: "Growth Rate",    type: "number", default: 0.8,  min: 0.1,  max: 2.0,    step: 0.1  },
+  { name: "repelRadius",   label: "Repel Radius",   type: "number", default: 12,   min: 5,    max: 30,     step: 1    },
+  { name: "repelStrength", label: "Repel Strength", type: "number", default: 0.4,  min: 0.1,  max: 1.0,    step: 0.05 },
+  { name: "maxEdge",       label: "Max Edge",       type: "number", default: 8,    min: 4,    max: 20,     step: 1    },
+  { name: "maxNodes",      label: "Max Nodes",      type: "number", default: 2800, min: 500,  max: 5000,   step: 100  },
+  { name: "stepsPerFrame", label: "Steps/Frame",    type: "number", default: 3,    min: 1,    max: 10,     step: 1    },
+  { name: "fadeRate",      label: "Fade Rate",      type: "number", default: 18,   min: 5,    max: 50,     step: 1    },
+  { name: "lineWeight",    label: "Line Weight",    type: "number", default: 1.8,  min: 0.5,  max: 4.0,    step: 0.1  },
+  { name: "bgColor",       label: "Background",     type: "color",  default: "#0a0e14" },
+  { name: "colorA",        label: "Color A",        type: "color",  default: "#50b8e8" },
+  { name: "colorB",        label: "Color B",        type: "color",  default: "#e850b8" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DOUBLE PENDULUM
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const doublePendulumSchema: ParamSchema[] = [
+  { name: "seed",         label: "Seed",           type: "number", default: 7777, min: 1,   max: 999999, step: 1    },
+  { name: "numPendulums", label: "Pendulum Count", type: "number", default: 9,    min: 1,   max: 20,     step: 1    },
+  { name: "length1",      label: "Length 1",       type: "number", default: 180,  min: 50,  max: 300,    step: 10   },
+  { name: "length2",      label: "Length 2",       type: "number", default: 180,  min: 50,  max: 300,    step: 10   },
+  { name: "gravity",      label: "Gravity",        type: "number", default: 1.2,  min: 0.5, max: 3.0,    step: 0.1  },
+  { name: "simSpeed",     label: "Sim Speed",      type: "number", default: 1.5,  min: 0.5, max: 3.0,    step: 0.1  },
+  { name: "fadeRate",     label: "Fade Rate",      type: "number", default: 8,    min: 2,   max: 30,     step: 1    },
+  { name: "bgColor",      label: "Background",     type: "color",  default: "#0a0e14" },
+  { name: "colorA",       label: "Color A",        type: "color",  default: "#e8b850" },
+  { name: "colorB",       label: "Color B",        type: "color",  default: "#50e8b8" },
+  { name: "colorC",       label: "Color C",        type: "color",  default: "#b850e8" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FRACTAL NOISE TERRAIN
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const fractalNoiseTerrainSchema: ParamSchema[] = [
+  { name: "seed",        label: "Seed",        type: "number", default: 3333, min: 1,    max: 999999, step: 1    },
+  { name: "octaves",     label: "Octaves",     type: "number", default: 6,    min: 1,    max: 10,     step: 1    },
+  { name: "persistence", label: "Persistence", type: "number", default: 0.5,  min: 0.1,  max: 1.0,    step: 0.05 },
+  { name: "lacunarity",  label: "Lacunarity",  type: "number", default: 2.0,  min: 1.5,  max: 3.0,    step: 0.1  },
+  { name: "scale",       label: "Scale",       type: "number", default: 4.0,  min: 1.0,  max: 10.0,   step: 0.5  },
+  { name: "contrast",    label: "Contrast",    type: "number", default: 1.2,  min: 0.5,  max: 3.0,    step: 0.1  },
+  { name: "lighting",    label: "Lighting",    type: "number", default: 2.5,  min: 0.0,  max: 5.0,    step: 0.25 },
+  { name: "driftSpeed",  label: "Drift Speed", type: "number", default: 0.8,  min: 0.0,  max: 3.0,    step: 0.1  },
+  { name: "resolution",  label: "Resolution",  type: "number", default: 120,  min: 40,   max: 200,    step: 10   },
+  { name: "bgColor",     label: "Background",  type: "color",  default: "#0a0e14" },
+  { name: "colorA",      label: "Deep",        type: "color",  default: "#1a2332" },
+  { name: "colorB",      label: "Mid",         type: "color",  default: "#2d4a5a" },
+  { name: "colorC",      label: "High",        type: "color",  default: "#5a7a6a" },
+  { name: "colorD",      label: "Peak",        type: "color",  default: "#d4e8e0" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MOIRE LATTICE
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const moireLatticeSchema: ParamSchema[] = [
+  { name: "seed",        label: "Seed",        type: "number", default: 5555, min: 1,   max: 999999, step: 1    },
+  { name: "gridCount",   label: "Grid Count",  type: "number", default: 5,    min: 2,   max: 12,     step: 1    },
+  { name: "lineSpacing", label: "Line Space",  type: "number", default: 18,   min: 5,   max: 50,     step: 1    },
+  { name: "lineWeight",  label: "Line Weight", type: "number", default: 0.8,  min: 0.2, max: 3.0,    step: 0.1  },
+  { name: "lineAlpha",   label: "Line Alpha",  type: "number", default: 85,   min: 20,  max: 255,    step: 5    },
+  { name: "rotSpeed",    label: "Rot Speed",   type: "number", default: 1.0,  min: 0.1, max: 3.0,    step: 0.1  },
+  { name: "bgColor",     label: "Background",  type: "color",  default: "#0a0e14" },
+  { name: "colorA",      label: "Color A",     type: "color",  default: "#50b8e8" },
+  { name: "colorB",      label: "Color B",     type: "color",  default: "#e8b850" },
+  { name: "colorC",      label: "Color C",     type: "color",  default: "#e850b8" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NEURAL WEAVE
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const neuralWeaveSchema: ParamSchema[] = [
+  { name: "seed",              label: "Seed",              type: "number", default: 6666, min: 1,   max: 999999, step: 1    },
+  { name: "nodeCount",         label: "Node Count",        type: "number", default: 45,   min: 10,  max: 100,    step: 5    },
+  { name: "connectionRadius",  label: "Connect Radius",    type: "number", default: 180,  min: 50,  max: 400,    step: 10   },
+  { name: "signalCount",       label: "Signal Count",      type: "number", default: 8,    min: 1,   max: 20,     step: 1    },
+  { name: "signalSpeed",       label: "Signal Speed",      type: "number", default: 1.2,  min: 0.3, max: 3.0,    step: 0.1  },
+  { name: "nodeSize",          label: "Node Size",         type: "number", default: 5,    min: 2,   max: 12,     step: 0.5  },
+  { name: "bgColor",           label: "Background",        type: "color",  default: "#0a0e14" },
+  { name: "nodeColor",         label: "Node Color",        type: "color",  default: "#50b8e8" },
+  { name: "edgeColor",         label: "Edge Color",        type: "color",  default: "#50b8e8" },
+  { name: "signalColor",       label: "Signal Color",      type: "color",  default: "#e8b850" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ORBITAL RESONANCE
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const orbitalResonanceSchema: ParamSchema[] = [
+  { name: "seed",           label: "Seed",           type: "number", default: 9999, min: 1,     max: 999999, step: 1    },
+  { name: "bodyCount",      label: "Body Count",     type: "number", default: 5,    min: 2,     max: 12,     step: 1    },
+  { name: "simSpeed",       label: "Sim Speed",      type: "number", default: 1.0,  min: 0.1,   max: 3.0,    step: 0.1  },
+  { name: "trailLength",    label: "Trail Length",   type: "number", default: 200,  min: 50,    max: 500,    step: 10   },
+  { name: "trailWeight",    label: "Trail Weight",   type: "number", default: 1.5,  min: 0.5,   max: 4.0,    step: 0.1  },
+  { name: "bodySize",       label: "Body Size",      type: "number", default: 8,    min: 3,     max: 20,     step: 1    },
+  { name: "centerSize",     label: "Center Size",    type: "number", default: 12,   min: 5,     max: 30,     step: 1    },
+  { name: "fadeTrails",     label: "Fade Trails",    type: "boolean", default: true },
+  { name: "fadeAmount",     label: "Fade Amount",    type: "number", default: 8,    min: 2,     max: 30,     step: 1    },
+  { name: "bgColor",        label: "Background",     type: "color",  default: "#0a0a0a" },
+  { name: "colorA",         label: "Color A",        type: "color",  default: "#ff6b35" },
+  { name: "colorB",         label: "Color B",        type: "color",  default: "#f7931e" },
+  { name: "colorC",         label: "Color C",        type: "color",  default: "#fdc830" },
+  { name: "colorD",         label: "Color D",        type: "color",  default: "#50b8e8" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// REACTION DIFFUSION
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const reactionDiffusionSchema: ParamSchema[] = [
+  { name: "seed",          label: "Seed",           type: "number", default: 1111, min: 1,     max: 999999, step: 1     },
+  { name: "Da",            label: "Diffusion A",    type: "number", default: 1.0,  min: 0.1,   max: 2.0,    step: 0.05  },
+  { name: "Db",            label: "Diffusion B",    type: "number", default: 0.5,  min: 0.1,   max: 1.0,    step: 0.05  },
+  { name: "f",             label: "Feed Rate",      type: "number", default: 0.055, min: 0.01, max: 0.1,    step: 0.005 },
+  { name: "k",             label: "Kill Rate",      type: "number", default: 0.062, min: 0.01, max: 0.1,    step: 0.005 },
+  { name: "stepsPerFrame", label: "Steps/Frame",    type: "number", default: 10,   min: 1,     max: 30,     step: 1     },
+  { name: "bgColor",       label: "Background",     type: "color",  default: "#0a0a0a" },
+  { name: "colorA",        label: "Color A",        type: "color",  default: "#1a1a2e" },
+  { name: "colorB",        label: "Color B",        type: "color",  default: "#00d4ff" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RECURSIVE SUBDIVISION
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const recursiveSubdivisionSchema: ParamSchema[] = [
+  { name: "seed",             label: "Seed",             type: "number",  default: 2222, min: 1,    max: 999999, step: 1    },
+  { name: "maxDepth",         label: "Max Depth",        type: "number",  default: 6,    min: 2,    max: 10,     step: 1    },
+  { name: "splitProbability", label: "Split Prob",       type: "number",  default: 0.85, min: 0.3,  max: 1.0,    step: 0.05 },
+  { name: "minSize",          label: "Min Size",         type: "number",  default: 30,   min: 10,   max: 100,    step: 5    },
+  { name: "maxStroke",        label: "Max Stroke",       type: "number",  default: 4,    min: 0.5,  max: 10,     step: 0.5  },
+  { name: "minStroke",        label: "Min Stroke",       type: "number",  default: 0.5,  min: 0.1,  max: 3,      step: 0.1  },
+  { name: "colorMode",        label: "Color Mode",       type: "number",  default: 0,    min: 0,    max: 1,      step: 1    },
+  { name: "animated",         label: "Animated",         type: "boolean", default: true },
+  { name: "animSpeed",        label: "Anim Speed",       type: "number",  default: 1.5,  min: 0.5,  max: 3.0,    step: 0.1  },
+  { name: "bgColor",          label: "Background",       type: "color",   default: "#0a0e14" },
+  { name: "colorA",           label: "Color A",          type: "color",   default: "#50b8e8" },
+  { name: "colorB",           label: "Color B",          type: "color",   default: "#e8b850" },
+  { name: "colorC",           label: "Color C",          type: "color",   default: "#e850b8" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TIDE HARMONICS
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const tideHarmonicsSchema: ParamSchema[] = [
+  { name: "seed",      label: "Seed",       type: "number", default: 8888, min: 1,   max: 999999, step: 1    },
+  { name: "waveCount", label: "Wave Count", type: "number", default: 5,    min: 2,   max: 12,     step: 1    },
+  { name: "gridRows",  label: "Grid Rows",  type: "number", default: 35,   min: 10,  max: 80,     step: 5    },
+  { name: "frequency", label: "Frequency",  type: "number", default: 1.0,  min: 0.3, max: 3.0,    step: 0.1  },
+  { name: "amplitude", label: "Amplitude",  type: "number", default: 45,   min: 10,  max: 150,    step: 5    },
+  { name: "speed",     label: "Speed",      type: "number", default: 1.0,  min: 0.1, max: 3.0,    step: 0.1  },
+  { name: "bgColor",   label: "Background", type: "color",  default: "#0a0e14" },
+  { name: "colorA",    label: "Color A",    type: "color",  default: "#50b8e8" },
+  { name: "colorB",    label: "Color B",    type: "color",  default: "#e850b8" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// VORONOI MOSAIC
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const voronoiMosaicSchema: ParamSchema[] = [
+  { name: "seed",         label: "Seed",         type: "number", default: 4444, min: 1,   max: 999999, step: 1    },
+  { name: "seedCount",    label: "Seed Count",   type: "number", default: 25,   min: 5,   max: 60,     step: 5    },
+  { name: "moveSpeed",    label: "Move Speed",   type: "number", default: 0.5,  min: 0.0, max: 2.0,    step: 0.1  },
+  { name: "edgeContrast", label: "Edge Contrast", type: "number", default: 1.2,  min: 0.0, max: 3.0,    step: 0.1  },
+  { name: "bgColor",      label: "Background",   type: "color",  default: "#0a0e14" },
 ];

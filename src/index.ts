@@ -8,6 +8,22 @@ export { WaveEther } from "./components/WaveEther";
 export { VortexBloom } from "./components/VortexBloom";
 export { CrystallineDrift } from "./components/CrystallineDrift";
 export { AmbientMesh } from "./components/AmbientMesh";
+export { EmberCascade } from "./components/EmberCascade";
+export { CliffordAttractor } from "./components/CliffordAttractor";
+export { HarmonicLattice } from "./components/HarmonicLattice";
+export { LissajousWeave } from "./components/LissajousWeave";
+export { PhyllotaxisDream } from "./components/PhyllotaxisDream";
+export { Spirograph } from "./components/Spirograph";
+export { DifferentialGrowth } from "./components/DifferentialGrowth";
+export { DoublePendulum } from "./components/DoublePendulum";
+export { FractalNoiseTerrain } from "./components/FractalNoiseTerrain";
+export { MoireLattice } from "./components/MoireLattice";
+export { NeuralWeave } from "./components/NeuralWeave";
+export { OrbitalResonance } from "./components/OrbitalResonance";
+export { ReactionDiffusion } from "./components/ReactionDiffusion";
+export { RecursiveSubdivision } from "./components/RecursiveSubdivision";
+export { TideHarmonics } from "./components/TideHarmonics";
+export { VoronoiMosaic } from "./components/VoronoiMosaic";
 export { BackgroundStudio } from "./components/BackgroundStudio";
 
 // Engines (for headless / custom renderer usage)
@@ -53,6 +69,102 @@ export {
   resetAmbientMesh,
   type AmbientMeshState,
 } from "./components/engines/ambientMesh";
+export {
+  initEmberCascade,
+  drawEmberCascade,
+  resetEmberCascade,
+  type EmberCascadeState,
+} from "./components/engines/emberCascade";
+export {
+  initCliffordAttractor,
+  drawCliffordAttractor,
+  resetCliffordAttractor,
+  type CliffordAttractorState,
+} from "./components/engines/cliffordAttractor";
+export {
+  initHarmonicLattice,
+  drawHarmonicLattice,
+  resetHarmonicLattice,
+  type HarmonicLatticeState,
+} from "./components/engines/harmonicLattice";
+export {
+  initLissajousWeave,
+  drawLissajousWeave,
+  resetLissajousWeave,
+  type LissajousWeaveState,
+} from "./components/engines/lissajousWeave";
+export {
+  initPhyllotaxisDream,
+  drawPhyllotaxisDream,
+  resetPhyllotaxisDream,
+  type PhyllotaxisDreamState,
+} from "./components/engines/phyllotaxisDream";
+export {
+  initSpirograph,
+  drawSpirograph,
+  resetSpirograph,
+  type SpirographState,
+} from "./components/engines/spirograph";
+export {
+  initDifferentialGrowth,
+  drawDifferentialGrowth,
+  resetDifferentialGrowth,
+  type DifferentialGrowthState,
+} from "./components/engines/differentialGrowth";
+export {
+  initDoublePendulum,
+  drawDoublePendulum,
+  resetDoublePendulum,
+  type DoublePendulumState,
+} from "./components/engines/doublePendulum";
+export {
+  initFractalNoiseTerrain,
+  drawFractalNoiseTerrain,
+  resetFractalNoiseTerrain,
+  type FractalNoiseTerrainState,
+} from "./components/engines/fractalNoiseTerrain";
+export {
+  initMoireLattice,
+  drawMoireLattice,
+  resetMoireLattice,
+  type MoireLatticeState,
+} from "./components/engines/moireLattice";
+export {
+  initNeuralWeave,
+  drawNeuralWeave,
+  resetNeuralWeave,
+  type NeuralWeaveState,
+} from "./components/engines/neuralWeave";
+export {
+  initOrbitalResonance,
+  drawOrbitalResonance,
+  resetOrbitalResonance,
+  type OrbitalResonanceState,
+} from "./components/engines/orbitalResonance";
+export {
+  initReactionDiffusion,
+  drawReactionDiffusion,
+  resetReactionDiffusion,
+  type ReactionDiffusionState,
+} from "./components/engines/reactionDiffusion";
+export {
+  initRecursiveSubdivision,
+  drawRecursiveSubdivision,
+  resetRecursiveSubdivision,
+  type RecursiveSubdivisionState,
+} from "./components/engines/recursiveSubdivision";
+export {
+  initTideHarmonics,
+  drawTideHarmonics,
+  resetTideHarmonics,
+  type TideHarmonicsState,
+} from "./components/engines/tideHarmonics";
+export {
+  initVoronoiMosaic,
+  drawVoronoiMosaic,
+  resetVoronoiMosaic,
+  type VoronoiMosaicState,
+} from "./components/engines/voronoiMosaic";
 
 // Schemas & types
 export {
@@ -70,6 +182,38 @@ export {
   crystallineDriftDefaults,
   ambientMeshSchema,
   ambientMeshDefaults,
+  emberCascadeSchema,
+  emberCascadeDefaults,
+  cliffordAttractorSchema,
+  cliffordAttractorDefaults,
+  harmonicLatticeSchema,
+  harmonicLatticeDefaults,
+  lissajousWeaveSchema,
+  lissajousWeaveDefaults,
+  phyllotaxisDreamSchema,
+  phyllotaxisDreamDefaults,
+  spirographSchema,
+  spirographDefaults,
+  differentialGrowthSchema,
+  differentialGrowthDefaults,
+  doublePendulumSchema,
+  doublePendulumDefaults,
+  fractalNoiseTerrainSchema,
+  fractalNoiseTerrainDefaults,
+  moireLatticeSchema,
+  moireLatticeDefaults,
+  neuralWeaveSchema,
+  neuralWeaveDefaults,
+  orbitalResonanceSchema,
+  orbitalResonanceDefaults,
+  reactionDiffusionSchema,
+  reactionDiffusionDefaults,
+  recursiveSubdivisionSchema,
+  recursiveSubdivisionDefaults,
+  tideHarmonicsSchema,
+  tideHarmonicsDefaults,
+  voronoiMosaicSchema,
+  voronoiMosaicDefaults,
   type ParamSchema,
   type FlowCurrentsParams,
   type GravityStormParams,
@@ -78,6 +222,22 @@ export {
   type VortexBloomParams,
   type CrystallineDriftParams,
   type AmbientMeshParams,
+  type EmberCascadeParams,
+  type CliffordAttractorParams,
+  type HarmonicLatticeParams,
+  type LissajousWeaveParams,
+  type PhyllotaxisDreamParams,
+  type SpirographParams,
+  type DifferentialGrowthParams,
+  type DoublePendulumParams,
+  type FractalNoiseTerrainParams,
+  type MoireLatticeParams,
+  type NeuralWeaveParams,
+  type OrbitalResonanceParams,
+  type ReactionDiffusionParams,
+  type RecursiveSubdivisionParams,
+  type TideHarmonicsParams,
+  type VoronoiMosaicParams,
 } from "./components/schemas";
 
 // Registry

@@ -15,6 +15,22 @@ import { WaveEther } from "./WaveEther";
 import { VortexBloom } from "./VortexBloom";
 import { CrystallineDrift } from "./CrystallineDrift";
 import { AmbientMesh } from "./AmbientMesh";
+import { EmberCascade } from "./EmberCascade";
+import { CliffordAttractor } from "./CliffordAttractor";
+import { HarmonicLattice } from "./HarmonicLattice";
+import { LissajousWeave } from "./LissajousWeave";
+import { PhyllotaxisDream } from "./PhyllotaxisDream";
+import { Spirograph } from "./Spirograph";
+import { DifferentialGrowth } from "./DifferentialGrowth";
+import { DoublePendulum } from "./DoublePendulum";
+import { FractalNoiseTerrain } from "./FractalNoiseTerrain";
+import { MoireLattice } from "./MoireLattice";
+import { NeuralWeave } from "./NeuralWeave";
+import { OrbitalResonance } from "./OrbitalResonance";
+import { ReactionDiffusion } from "./ReactionDiffusion";
+import { RecursiveSubdivision } from "./RecursiveSubdivision";
+import { TideHarmonics } from "./TideHarmonics";
+import { VoronoiMosaic } from "./VoronoiMosaic";
 import {
   flowCurrentsSchema,
   flowCurrentsDefaults,
@@ -30,6 +46,38 @@ import {
   crystallineDriftDefaults,
   ambientMeshSchema,
   ambientMeshDefaults,
+  emberCascadeSchema,
+  emberCascadeDefaults,
+  cliffordAttractorSchema,
+  cliffordAttractorDefaults,
+  harmonicLatticeSchema,
+  harmonicLatticeDefaults,
+  lissajousWeaveSchema,
+  lissajousWeaveDefaults,
+  phyllotaxisDreamSchema,
+  phyllotaxisDreamDefaults,
+  spirographSchema,
+  spirographDefaults,
+  differentialGrowthSchema,
+  differentialGrowthDefaults,
+  doublePendulumSchema,
+  doublePendulumDefaults,
+  fractalNoiseTerrainSchema,
+  fractalNoiseTerrainDefaults,
+  moireLatticeSchema,
+  moireLatticeDefaults,
+  neuralWeaveSchema,
+  neuralWeaveDefaults,
+  orbitalResonanceSchema,
+  orbitalResonanceDefaults,
+  reactionDiffusionSchema,
+  reactionDiffusionDefaults,
+  recursiveSubdivisionSchema,
+  recursiveSubdivisionDefaults,
+  tideHarmonicsSchema,
+  tideHarmonicsDefaults,
+  voronoiMosaicSchema,
+  voronoiMosaicDefaults,
   type ParamSchema,
   type FlowCurrentsParams,
   type GravityStormParams,
@@ -38,13 +86,29 @@ import {
   type VortexBloomParams,
   type CrystallineDriftParams,
   type AmbientMeshParams,
+  type EmberCascadeParams,
+  type CliffordAttractorParams,
+  type HarmonicLatticeParams,
+  type LissajousWeaveParams,
+  type PhyllotaxisDreamParams,
+  type SpirographParams,
+  type DifferentialGrowthParams,
+  type DoublePendulumParams,
+  type FractalNoiseTerrainParams,
+  type MoireLatticeParams,
+  type NeuralWeaveParams,
+  type OrbitalResonanceParams,
+  type ReactionDiffusionParams,
+  type RecursiveSubdivisionParams,
+  type TideHarmonicsParams,
+  type VoronoiMosaicParams,
 } from "./schemas";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
 // ─────────────────────────────────────────────────────────────────────────────
 
-type BackgroundId = "flow-currents" | "gravity-storm" | "geo-pulse" | "wave-ether" | "vortex-bloom" | "crystalline-drift" | "ambient-mesh";
+type BackgroundId = "flow-currents" | "gravity-storm" | "geo-pulse" | "wave-ether" | "vortex-bloom" | "crystalline-drift" | "ambient-mesh" | "ember-cascade" | "clifford-attractor" | "harmonic-lattice" | "lissajous-weave" | "phyllotaxis-dream" | "spirograph" | "differential-growth" | "double-pendulum" | "fractal-noise-terrain" | "moire-lattice" | "neural-weave" | "orbital-resonance" | "reaction-diffusion" | "recursive-subdivision" | "tide-harmonics" | "voronoi-mosaic";
 type AnyParams = Record<string, number | string | boolean>;
 
 interface BackgroundEntry {
@@ -121,6 +185,150 @@ const BACKGROUNDS: BackgroundEntry[] = [
     Component: AmbientMesh,
     description: "Nodes drift through noise fields forming dynamic connections.",
     installId: "ambient-mesh",
+  },
+  {
+    id: "ember-cascade",
+    label: "Ember Cascade",
+    schema: emberCascadeSchema,
+    defaults: emberCascadeDefaults as unknown as AnyParams,
+    Component: EmberCascade,
+    description: "Thermal particles rise with turbulent motion and glow.",
+    installId: "ember-cascade",
+  },
+  {
+    id: "clifford-attractor",
+    label: "Clifford Attractor",
+    schema: cliffordAttractorSchema,
+    defaults: cliffordAttractorDefaults as unknown as AnyParams,
+    Component: CliffordAttractor,
+    description: "Strange attractor density map revealing fractal chaos.",
+    installId: "clifford-attractor",
+  },
+  {
+    id: "harmonic-lattice",
+    label: "Harmonic Lattice",
+    schema: harmonicLatticeSchema,
+    defaults: harmonicLatticeDefaults as unknown as AnyParams,
+    Component: HarmonicLattice,
+    description: "Standing wave interference patterns with nodal lines.",
+    installId: "harmonic-lattice",
+  },
+  {
+    id: "lissajous-weave",
+    label: "Lissajous Weave",
+    schema: lissajousWeaveSchema,
+    defaults: lissajousWeaveDefaults as unknown as AnyParams,
+    Component: LissajousWeave,
+    description: "Harmonic phase tapestry with multiple frequency ratios.",
+    installId: "lissajous-weave",
+  },
+  {
+    id: "phyllotaxis-dream",
+    label: "Phyllotaxis Dream",
+    schema: phyllotaxisDreamSchema,
+    defaults: phyllotaxisDreamDefaults as unknown as AnyParams,
+    Component: PhyllotaxisDream,
+    description: "Golden angle spiral growth pattern.",
+    installId: "phyllotaxis-dream",
+  },
+  {
+    id: "spirograph",
+    label: "Spirograph",
+    schema: spirographSchema,
+    defaults: spirographDefaults as unknown as AnyParams,
+    Component: Spirograph,
+    description: "Hypotrochoid curves from rolling circles.",
+    installId: "spirograph",
+  },
+  {
+    id: "differential-growth",
+    label: "Differential Growth",
+    schema: differentialGrowthSchema,
+    defaults: differentialGrowthDefaults as unknown as AnyParams,
+    Component: DifferentialGrowth,
+    description: "Organic growth with spring forces and repulsion.",
+    installId: "differential-growth",
+  },
+  {
+    id: "double-pendulum",
+    label: "Double Pendulum",
+    schema: doublePendulumSchema,
+    defaults: doublePendulumDefaults as unknown as AnyParams,
+    Component: DoublePendulum,
+    description: "Chaotic dynamics with RK4 integration.",
+    installId: "double-pendulum",
+  },
+  {
+    id: "fractal-noise-terrain",
+    label: "Fractal Noise Terrain",
+    schema: fractalNoiseTerrainSchema,
+    defaults: fractalNoiseTerrainDefaults as unknown as AnyParams,
+    Component: FractalNoiseTerrain,
+    description: "Layered octaves creating procedural landscapes.",
+    installId: "fractal-noise-terrain",
+  },
+  {
+    id: "moire-lattice",
+    label: "Moire Lattice",
+    schema: moireLatticeSchema,
+    defaults: moireLatticeDefaults as unknown as AnyParams,
+    Component: MoireLattice,
+    description: "Rotating line grids creating interference patterns.",
+    installId: "moire-lattice",
+  },
+  {
+    id: "neural-weave",
+    label: "Neural Weave",
+    schema: neuralWeaveSchema,
+    defaults: neuralWeaveDefaults as unknown as AnyParams,
+    Component: NeuralWeave,
+    description: "Network nodes with traveling signal pulses.",
+    installId: "neural-weave",
+  },
+  {
+    id: "orbital-resonance",
+    label: "Orbital Resonance",
+    schema: orbitalResonanceSchema,
+    defaults: orbitalResonanceDefaults as unknown as AnyParams,
+    Component: OrbitalResonance,
+    description: "Bodies orbit at resonant period ratios.",
+    installId: "orbital-resonance",
+  },
+  {
+    id: "reaction-diffusion",
+    label: "Reaction Diffusion",
+    schema: reactionDiffusionSchema,
+    defaults: reactionDiffusionDefaults as unknown as AnyParams,
+    Component: ReactionDiffusion,
+    description: "Gray-Scott model pattern formation.",
+    installId: "reaction-diffusion",
+  },
+  {
+    id: "recursive-subdivision",
+    label: "Recursive Subdivision",
+    schema: recursiveSubdivisionSchema,
+    defaults: recursiveSubdivisionDefaults as unknown as AnyParams,
+    Component: RecursiveSubdivision,
+    description: "Binary space partitioning (Mondrian-like).",
+    installId: "recursive-subdivision",
+  },
+  {
+    id: "tide-harmonics",
+    label: "Tide Harmonics",
+    schema: tideHarmonicsSchema,
+    defaults: tideHarmonicsDefaults as unknown as AnyParams,
+    Component: TideHarmonics,
+    description: "Wave interference along horizontal lines.",
+    installId: "tide-harmonics",
+  },
+  {
+    id: "voronoi-mosaic",
+    label: "Voronoi Mosaic",
+    schema: voronoiMosaicSchema,
+    defaults: voronoiMosaicDefaults as unknown as AnyParams,
+    Component: VoronoiMosaic,
+    description: "Dynamic Voronoi tessellation.",
+    installId: "voronoi-mosaic",
   },
 ];
 
@@ -297,6 +505,8 @@ function CodeBlock({ code, onCopy }: { code: string; onCopy: () => void }) {
 
 export function BackgroundStudio() {
   const [activeId, setActiveId] = useState<BackgroundId>("flow-currents");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [paramMap, setParamMap] = useState<Record<BackgroundId, AnyParams>>({
     "flow-currents": { ...(flowCurrentsDefaults as AnyParams) },
     "gravity-storm": { ...(gravityStormDefaults as AnyParams) },
@@ -305,6 +515,22 @@ export function BackgroundStudio() {
     "vortex-bloom": { ...(vortexBloomDefaults as AnyParams) },
     "crystalline-drift": { ...(crystallineDriftDefaults as AnyParams) },
     "ambient-mesh": { ...(ambientMeshDefaults as AnyParams) },
+    "ember-cascade": { ...(emberCascadeDefaults as unknown as AnyParams) },
+    "clifford-attractor": { ...(cliffordAttractorDefaults as unknown as AnyParams) },
+    "harmonic-lattice": { ...(harmonicLatticeDefaults as unknown as AnyParams) },
+    "lissajous-weave": { ...(lissajousWeaveDefaults as unknown as AnyParams) },
+    "phyllotaxis-dream": { ...(phyllotaxisDreamDefaults as unknown as AnyParams) },
+    "spirograph": { ...(spirographDefaults as unknown as AnyParams) },
+    "differential-growth": { ...(differentialGrowthDefaults as unknown as AnyParams) },
+    "double-pendulum": { ...(doublePendulumDefaults as unknown as AnyParams) },
+    "fractal-noise-terrain": { ...(fractalNoiseTerrainDefaults as unknown as AnyParams) },
+    "moire-lattice": { ...(moireLatticeDefaults as unknown as AnyParams) },
+    "neural-weave": { ...(neuralWeaveDefaults as unknown as AnyParams) },
+    "orbital-resonance": { ...(orbitalResonanceDefaults as unknown as AnyParams) },
+    "reaction-diffusion": { ...(reactionDiffusionDefaults as unknown as AnyParams) },
+    "recursive-subdivision": { ...(recursiveSubdivisionDefaults as unknown as AnyParams) },
+    "tide-harmonics": { ...(tideHarmonicsDefaults as unknown as AnyParams) },
+    "voronoi-mosaic": { ...(voronoiMosaicDefaults as unknown as AnyParams) },
   });
   const [exportOpen, setExportOpen] = useState(false);
   const [exportTab, setExportTab] = useState<"usage" | "full">("usage");
@@ -345,6 +571,11 @@ export function BackgroundStudio() {
 
   const { Component } = bg;
 
+  const filteredBackgrounds = BACKGROUNDS.filter((b) =>
+    b.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    b.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div
       style={{
@@ -382,29 +613,95 @@ export function BackgroundStudio() {
           <div style={{ fontSize: 10, color: T.muted, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>
             Background
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6, marginBottom: 16 }}>
-            {BACKGROUNDS.map((b) => (
-              <button
-                key={b.id}
-                onClick={() => setActiveId(b.id)}
+          
+          {/* Current selection display - clickable to toggle */}
+          <div
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            style={{
+              background: T.input,
+              border: `1px solid ${T.border}`,
+              borderRadius: 8,
+              padding: "12px 14px",
+              marginBottom: dropdownOpen ? 12 : 16,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              transition: "all 0.2s",
+            }}
+          >
+            <span style={{ fontSize: 13, color: T.text, fontWeight: 500 }}>{bg.label}</span>
+            <span style={{ fontSize: 12, color: T.muted, transform: dropdownOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▼</span>
+          </div>
+
+          {/* Dropdown content - only shown when open */}
+          {dropdownOpen && (
+            <div style={{ marginBottom: 16 }}>
+              {/* Search input */}
+              <input
+                type="text"
+                placeholder="Search backgrounds..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 style={{
-                  background: activeId === b.id ? T.accent : T.input,
-                  border: `1px solid ${activeId === b.id ? T.accent : T.border}`,
-                  borderRadius: 6,
-                  padding: "8px 6px",
-                  color: activeId === b.id ? T.white : T.muted,
-                  fontSize: 11,
-                  fontWeight: activeId === b.id ? 600 : 400,
-                  cursor: "pointer",
-                  textAlign: "center",
-                  lineHeight: 1.3,
-                  transition: "all 0.15s",
+                  width: "100%",
+                  background: T.input,
+                  border: `1px solid ${T.border}`,
+                  borderRadius: 8,
+                  padding: "10px 14px",
+                  color: T.text,
+                  fontSize: 13,
+                  marginBottom: 8,
+                  fontFamily: "inherit",
+                  outline: "none",
+                }}
+              />
+
+              {/* Background list */}
+              <div
+                style={{
+                  maxHeight: 280,
+                  overflowY: "auto",
+                  border: `1px solid ${T.border}`,
+                  borderRadius: 8,
+                  background: T.dark,
                 }}
               >
-                {b.label}
-              </button>
-            ))}
-          </div>
+                {filteredBackgrounds.map((b, idx) => (
+                  <div
+                    key={b.id}
+                    onClick={() => {
+                      setActiveId(b.id);
+                      setDropdownOpen(false);
+                      setSearchQuery("");
+                    }}
+                    style={{
+                      padding: "12px 14px",
+                      cursor: "pointer",
+                      background: activeId === b.id ? T.accent : "transparent",
+                      color: activeId === b.id ? T.white : T.text,
+                      fontSize: 13,
+                      fontWeight: activeId === b.id ? 600 : 400,
+                      borderBottom: idx < filteredBackgrounds.length - 1 ? `1px solid ${T.border}` : "none",
+                      transition: "all 0.15s",
+                    }}
+                    onMouseEnter={(e) => {
+                      if (activeId !== b.id) {
+                        e.currentTarget.style.background = T.border;
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (activeId !== b.id) {
+                        e.currentTarget.style.background = "transparent";
+                      }
+                    }}
+                  >
+                    {b.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div style={{ fontSize: 11, color: T.muted, marginBottom: 16, lineHeight: 1.5 }}>
             {bg.description}
