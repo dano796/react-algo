@@ -176,7 +176,7 @@ export function Sidebar({
         <div className="flex gap-2">
           <button
             onClick={onReset}
-            className="flex-1 flex items-center justify-center gap-1 bg-transparent border border-border rounded-lg text-[12px] text-muted py-2 cursor-pointer hover:text-ink hover:border-border-hover transition-colors font-sans"
+            className="flex-1 flex items-center justify-center gap-1 bg-transparent border border-current rounded-lg text-[12px] text-muted py-2 cursor-pointer hover:text-ink transition-colors font-sans"
           >
             ↺ Reset
           </button>
@@ -186,7 +186,7 @@ export function Sidebar({
               setCopied(true);
               setTimeout(() => setCopied(false), 1500);
             }}
-            className={`flex-1 flex items-center justify-center gap-1 bg-transparent border border-border rounded-lg text-[12px] py-2 cursor-pointer hover:border-border-hover transition-colors font-sans ${copied ? "text-green" : "text-muted hover:text-ink"}`}
+            className={`flex-1 flex items-center justify-center gap-1 bg-transparent border border-current rounded-lg text-[12px] py-2 cursor-pointer transition-colors font-sans ${copied ? "text-green" : "text-muted hover:text-ink"}`}
           >
             {copied ? "copied ✓" : "⤴ Share"}
           </button>
@@ -194,7 +194,7 @@ export function Sidebar({
 
         <a
           href="/docs"
-          className="flex items-center justify-center gap-1 bg-transparent border border-border rounded-lg text-[12px] text-muted py-2 cursor-pointer hover:text-ink hover:border-border-hover transition-colors font-sans no-underline"
+          className="flex items-center justify-center gap-1 bg-transparent border border-current rounded-lg text-[12px] text-muted py-2 cursor-pointer hover:text-ink transition-colors font-sans no-underline"
         >
           Read Full Docs
         </a>

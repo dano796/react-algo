@@ -14,31 +14,43 @@ export function CanvasExportTabs({
   onVideoAction,
 }: CanvasExportTabsProps) {
   return (
-    <div className="flex items-center gap-0.5">
+    <div className="flex items-center gap-2">
       {(["image", "div-video"] as const).map((tab) => (
         <div key={tab} className="relative group">
           <button
             onClick={tab === "image" ? onDownloadImage : onVideoAction}
             disabled={tab === "image" ? isDownloadingImage : false}
-            className={`text-[12px] font-sans px-3 py-1.5 rounded-md cursor-pointer border-none transition-colors bg-transparent text-muted hover:text-ink ${
+            className={`relative overflow-hidden text-[12px] font-sans px-3 py-1.5 rounded-md cursor-pointer border border-current transition-colors bg-transparent ${
               tab === "image" && isDownloadingImage
-                ? "opacity-60 cursor-wait"
-                : ""
-            } ${
-              tab === "div-video" && isRecordingVideo
-                ? "text-ink"
-                : ""
+                ? "opacity-60 cursor-wait text-muted"
+                : tab === "div-video" && isRecordingVideo
+                  ? "text-red-500 hover:text-red-400"
+                  : "text-muted hover:text-ink"
             }`}
           >
-            {tab === "image"
-              ? isDownloadingImage
-                ? "Downloading..."
-                : "Image"
-              : isRecordingVideo
-                ? `Cancel (${recordingCountdown ?? 0})`
-                : "Video"}
+            {tab === "div-video" && isRecordingVideo && (
+              <>
+                <style>{`@keyframes rec-fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}`}</style>
+                <span
+                  className="absolute inset-0 bg-red-500/20 rounded-sm"
+                  style={{
+                    transformOrigin: "left",
+                    animation: "rec-fill 10s linear forwards",
+                  }}
+                />
+              </>
+            )}
+            <span className="relative z-10">
+              {tab === "image"
+                ? isDownloadingImage
+                  ? "Downloading..."
+                  : "Image"
+                : isRecordingVideo
+                  ? `Cancel (${recordingCountdown ?? 0}s)`
+                  : "Video"}
+            </span>
           </button>
-          <div className="pointer-events-none absolute bottom-full left-0 z-20 mb-1.5 w-36 rounded-md bg-faint px-2 py-1.5 text-[10px] leading-tight text-ink opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100">
+          <div className="pointer-events-none absolute bottom-full left-0 z-20 mb-1.5 w-36 rounded-md bg-faint px-2 py-1.5 text-[11px] leading-tight text-ink opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100">
             {tab === "image"
               ? "Click to download this background as an image"
               : isRecordingVideo
