@@ -90,7 +90,7 @@ try {
   }
 
   const BASE_URL =
-    "https://raw.githubusercontent.com/dano796/alg-art-backgrounds/main";
+    "https://raw.githubusercontent.com/dano796/reart/main";
 
   const output = {
     version: "1.0.0",
