@@ -1,6 +1,10 @@
 <div align="center">
 	<br>
-	<img src="./media/reart-logo.png" alt="ReArt" height="160">
+	<picture>
+		<source media="(prefers-color-scheme: light)" srcset="./media/reart-gh-black.svg">
+		<source media="(prefers-color-scheme: dark)" srcset="./media/reart-gh-white.svg">
+		<img src="./media/reart-gh-black.svg" alt="ReArt" height="160">
+	</picture>
 	<br>
 	<b>Algorithmic art backgrounds for React — installed like shadcn/ui, owned by you.</b>
 	<br>

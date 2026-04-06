@@ -46,7 +46,7 @@ export function HeroSection() {
 
         {/* Headline */}
         <h1 className="hero-h1 font-display font-extrabold text-ink mb-6.5 leading-[0.92] text-[clamp(52px,9vw,96px)]">
-          ReArt
+          Algorithmic Art
           <br />
           <span className="text-accent">for React</span>
         </h1>

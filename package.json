@@ -1,6 +1,6 @@
 {
   "name": "@dano796/react-reart",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Algorithmic art backgrounds as copy-paste-ready React components.",
   "type": "module",
   "main": "./dist/index.js",
