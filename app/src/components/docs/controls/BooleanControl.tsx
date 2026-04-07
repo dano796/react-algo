@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { ParamSchema } from "@dano796/react-reart";
+import type { ParamSchema } from "react-algo";
 
 type BooleanParam = Extract<ParamSchema, { type: "boolean" }>;
 

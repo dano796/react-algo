@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "baseUrl": "https://raw.githubusercontent.com/dano796/reart/main",
+  "baseUrl": "https://raw.githubusercontent.com/dano796/react-algo/main",
   "components": [
     {
       "id": "flow-currents",

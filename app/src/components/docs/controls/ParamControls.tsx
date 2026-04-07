@@ -1,4 +1,4 @@
-import type { ParamSchema } from "@dano796/react-reart";
+import type { ParamSchema } from "react-algo";
 import { SliderControl } from "./SliderControl";
 import { ColorControl } from "./ColorControl";
 import { BooleanControl } from "./BooleanControl";

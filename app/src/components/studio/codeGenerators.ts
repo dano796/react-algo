@@ -40,7 +40,7 @@ export function generateFullComponent(
       : `        ${s.name}={${v}}`;
   });
   return (
-    `import { ${name} } from "@dano796/react-reart";\n\n` +
+    `import { ${name} } from "react-algo";\n\n` +
     `export default function MyPage() {\n` +
     `  return (\n` +
     `    <div style={{ position: "relative", height: "100vh" }}>\n` +

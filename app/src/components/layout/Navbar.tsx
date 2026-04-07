@@ -71,11 +71,11 @@ export function Navbar() {
         >
           <img
             src="/reart-icon.png"
-            alt="ReArt"
+            alt="React Algo"
             className="w-7 h-7 rounded-[7px] shrink-0 mix-blend-screen"
           />
           <span className="font-display font-bold text-[14px] text-ink">
-            ReArt
+            React Algo
           </span>
         </button>
 

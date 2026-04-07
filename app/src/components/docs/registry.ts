@@ -91,7 +91,7 @@ import {
   HexRipple,
   RecursiveTunnel,
   type ParamSchema,
-} from "@dano796/react-reart";
+} from "react-algo";
 
 type BgComponentProps = { style?: CSSProperties; [key: string]: unknown };
 

@@ -1,4 +1,4 @@
-import type { ParamSchema } from "@dano796/react-reart";
+import type { ParamSchema } from "react-algo";
 
 export type BackgroundId =
   | "flow-currents"

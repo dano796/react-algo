@@ -1,5 +1,5 @@
 /**
- * BackgroundStudio — interactive playground for ReArt.
+ * BackgroundStudio — interactive playground for React Algo.
  *
  * Thin orchestrator: owns all state, delegates rendering to Sidebar,
  * the canvas preview, and ExportModal.

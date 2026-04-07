@@ -1,5 +1,5 @@
 {
-  "name": "@dano796/react-reart",
+  "name": "react-algo",
   "version": "0.1.2",
   "description": "Algorithmic art backgrounds as copy-paste-ready React components.",
   "type": "module",
@@ -13,7 +13,7 @@
     }
   },
   "bin": {
-    "@dano796/react-reart": "./cli/index.js"
+    "react-algo": "./cli/index.js"
   },
   "scripts": {
     "build": "tsc && node cli/build-registry.mjs",
@@ -58,11 +58,11 @@
   "author": "Daniel Ortiz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dano796/reart.git"
+    "url": "https://github.com/dano796/react-algo.git"
   },
-  "homepage": "https://github.com/dano796/reart#readme",
+  "homepage": "https://github.com/dano796/react-algo#readme",
   "bugs": {
-    "url": "https://github.com/dano796/reart/issues"
+    "url": "https://github.com/dano796/react-algo/issues"
   },
   "license": "SEE LICENSE IN LICENSE.md"
 }

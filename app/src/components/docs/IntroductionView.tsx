@@ -21,7 +21,7 @@ export function IntroductionView() {
       </h1>
 
       <p className="docs-in-1 text-[15px] text-muted leading-[1.8] font-sans mb-5">
-        ReArt is an open-source collection of animated canvas backgrounds
+        React Algo is an open-source collection of animated canvas backgrounds
         inspired by algorithmic concepts. Each background is a self-contained
         renderer — installed via CLI, owned by you.
       </p>
@@ -42,7 +42,7 @@ export function IntroductionView() {
       </h2>
 
       <p className="docs-in-2 text-[15px] text-muted leading-[1.8] font-sans mb-4">
-        The goal of ReArt is simple — provide flexible, visually stunning
+        The goal of React Algo is simple — provide flexible, visually stunning
         backgrounds that you own entirely, taking your web projects to the next
         level.
       </p>

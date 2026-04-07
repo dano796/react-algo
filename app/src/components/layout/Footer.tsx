@@ -38,11 +38,11 @@ export function Footer() {
           <div className="flex items-center gap-2.5">
             <img
               src="/reart-icon.png"
-              alt="ReArt"
+              alt="React Algo"
               className="w-6 h-6 rounded-md mix-blend-screen"
             />
             <span className="text-[14px] text-ink font-display font-semibold">
-              ReArt
+              React Algo
             </span>
           </div>
           <p className="text-[13px] text-muted font-sans py-1">
@@ -70,7 +70,7 @@ export function Footer() {
             </a>
           </nav>
           <span className="inline-flex items-center gap-1.5 text-[13px] text-muted py-1">
-            <Copyright size={12} /> {new Date().getFullYear()} ReArt
+            <Copyright size={12} /> {new Date().getFullYear()} React Algo
           </span>
         </div>
       </div>

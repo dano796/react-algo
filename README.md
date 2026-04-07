@@ -1,9 +1,9 @@
 <div align="center">
 	<br>
 	<picture>
-		<source media="(prefers-color-scheme: light)" srcset="./media/reart-gh-black.svg">
-		<source media="(prefers-color-scheme: dark)" srcset="./media/reart-gh-white.svg">
-		<img src="./media/reart-gh-black.svg" alt="ReArt" height="160">
+		<source media="(prefers-color-scheme: light)" srcset="./media/react-algo-gh-black.svg">
+		<source media="(prefers-color-scheme: dark)" srcset="./media/react-algo-gh-white.svg">
+		<img src="./media/react-algo-gh-black.svg" alt="React Algo" height="160">
 	</picture>
 	<br>
 	<b>Algorithmic art backgrounds for React — installed like shadcn/ui, owned by you.</b>
@@ -11,15 +11,15 @@
   <sub>Stand out with 20+ free customizable backgrounds.</sub>
 	<br>
 	<br>
-  <a href="https://www.npmjs.com/package/@dano796/react-reart"><img alt="License" src="https://img.shields.io/npm/v/@dano796/react-reart"></a>
-  <a href="https://github.com/dano796/reart/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT+Commons_Clause-green"></a>
+  <a href="https://www.npmjs.com/package/react-algo"><img alt="License" src="https://img.shields.io/npm/v/react-algo"></a>
+  <a href="https://github.com/dano796/react-algo/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT+Commons_Clause-green"></a>
   <br>
   <br>
 </div>
 
 ## Table of Contents
 
-- [What is ReArt?](#what-is-reart)
+- [What is React Algo?](#what-is-reart)
 - [How it works](#how-it-works)
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
@@ -28,9 +28,9 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-## What is ReArt?
+## What is React Algo?
 
-ReArt is an open source collection of animated canvas backgrounds for React. Each background is a self-contained renderer — you get the full source directly in your project with no runtime npm dependency.
+React Algo is an open source collection of animated canvas backgrounds for React. Each background is a self-contained renderer — you get the full source directly in your project with no runtime npm dependency.
 
 ## How it works
 
@@ -45,7 +45,7 @@ No other runtime dependencies. Components use only React and browser APIs (`canv
 ## Quick Start
 
 ```bash
-npx @dano796/react-reart add wave-ether
+npx react-algo add wave-ether
 ```
 
 This copies the component files into `components/backgrounds/` in your project.
@@ -53,13 +53,13 @@ This copies the component files into `components/backgrounds/` in your project.
 ## CLI Commands
 
 ```bash
-npx @dano796/react-reart list                       # Browse all available backgrounds
-npx @dano796/react-reart info <id>                  # See files and description
-npx @dano796/react-reart add <id>                   # Install a component
-npx @dano796/react-reart add <id> --force           # Overwrite existing files
-npx @dano796/react-reart add <id> --dry-run         # Preview which files would be written
-npx @dano796/react-reart update <id>                # Re-fetch a component (with confirmation)
-npx @dano796/react-reart add background-studio      # Install all components + the studio playground
+npx react-algo list                       # Browse all available backgrounds
+npx react-algo info <id>                  # See files and description
+npx react-algo add <id>                   # Install a component
+npx react-algo add <id> --force           # Overwrite existing files
+npx react-algo add <id> --dry-run         # Preview which files would be written
+npx react-algo update <id>                # Re-fetch a component (with confirmation)
+npx react-algo add background-studio      # Install all components + the studio playground
 ```
 
 ## Usage Example
@@ -79,11 +79,11 @@ export default function Hero() {
 }
 ```
 
-Run `npx @dano796/react-reart info <id>` to see all available props for any component.
+Run `npx react-algo info <id>` to see all available props for any component.
 
 ## Contributing
 
-ReArt is always open to improvements and contributions. Check the [Open Issues](https://github.com/dano796/reart/issues) if you want to contribute, or open a new one to add your own improvements/ideas. Before contributing, please read the [Contribution Guide](./CONTRIBUTING.md).
+React Algo is always open to improvements and contributions. Check the [Open Issues](https://github.com/dano796/react-algo/issues) if you want to contribute, or open a new one to add your own improvements/ideas. Before contributing, please read the [Contribution Guide](./CONTRIBUTING.md).
 
 ## License
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * ReArt CLI — shadcn/ui-style component installer.
+ * React Algo CLI — shadcn/ui-style component installer.
  *
  * Usage:
- *   npx @dano796/react-reart add <component-id> [--force] [--dry-run]
- *   npx @dano796/react-reart update <component-id>
- *   npx @dano796/react-reart list
- *   npx @dano796/react-reart info <component-id>
+ *   npx react-algo add <component-id> [--force] [--dry-run]
+ *   npx react-algo update <component-id>
+ *   npx react-algo list
+ *   npx react-algo info <component-id>
  *
  * Copies component source directly into the user's project — no runtime
  * dependency, full ownership of the code (same philosophy as shadcn/ui).
@@ -23,7 +23,7 @@ import readline from "readline";
 
 const REGISTRY_URL =
   process.env.ALG_ART_BACKGROUNDS_REGISTRY ||
-  "https://raw.githubusercontent.com/dano796/reart/main/cli/registry.json";
+  "https://raw.githubusercontent.com/dano796/react-algo/main/cli/registry.json";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Helpers
@@ -148,12 +148,12 @@ async function cmdList() {
     log(`  ${"".padEnd(20)} ${comp.description}`, "dim");
     console.log();
   }
-  log(`Install with: npx @dano796/react-reart add <id>\n`, "dim");
+  log(`Install with: npx react-algo add <id>\n`, "dim");
 }
 
 async function cmdInfo(id) {
   if (!id) {
-    log("\nUsage: npx @dano796/react-reart info <component-id>\n", "yellow");
+    log("\nUsage: npx react-algo info <component-id>\n", "yellow");
     process.exit(1);
   }
 
@@ -161,7 +161,7 @@ async function cmdInfo(id) {
   const comp = registry.components.find((c) => c.id === id);
 
   if (!comp) {
-    log(`\nComponent "${id}" not found. Run \`npx @dano796/react-reart list\` to see available components.\n`, "red");
+    log(`\nComponent "${id}" not found. Run \`npx react-algo list\` to see available components.\n`, "red");
     process.exit(1);
   }
 
@@ -177,13 +177,13 @@ async function cmdInfo(id) {
     log(`  npm install ${comp.peerDependencies.join(" ")}`, "cyan");
     log(`  # or: yarn add / pnpm add ${comp.peerDependencies.join(" ")}`, "dim");
   }
-  log(`\nInstall: npx @dano796/react-reart add ${comp.id}\n`, "dim");
+  log(`\nInstall: npx react-algo add ${comp.id}\n`, "dim");
 }
 
 async function cmdAdd(id, { force = false, dryRun = false } = {}) {
   if (!id) {
-    log("\nUsage: npx @dano796/react-reart add <component-id> [--force] [--dry-run]\n", "yellow");
-    log("Run `npx @dano796/react-reart list` to see available components.\n", "dim");
+    log("\nUsage: npx react-algo add <component-id> [--force] [--dry-run]\n", "yellow");
+    log("Run `npx react-algo list` to see available components.\n", "dim");
     process.exit(1);
   }
 
@@ -296,8 +296,8 @@ async function cmdAdd(id, { force = false, dryRun = false } = {}) {
 
 async function cmdUpdate(id) {
   if (!id) {
-    log("\nUsage: npx @dano796/react-reart update <component-id>\n", "yellow");
-    log("Run `npx @dano796/react-reart list` to see available components.\n", "dim");
+    log("\nUsage: npx react-algo update <component-id>\n", "yellow");
+    log("Run `npx react-algo list` to see available components.\n", "dim");
     process.exit(1);
   }
 
@@ -373,7 +373,7 @@ const commands = {
 };
 
 if (!command || command === "help" || command === "--help" || command === "-h") {
-  log("\nReArt — algorithmic background components\n", "bold");
+  log("\nReact Algo — algorithmic background components\n", "bold");
   log("Commands:", "dim");
   log("  list                       List all available backgrounds", "cyan");
   log("  add <id>                   Copy a background into your project", "cyan");

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
-import { RecursiveTunnel } from "@dano796/react-reart";
+import { RecursiveTunnel } from "react-algo";
 import { navigate } from "../../lib/navigate";
 import { CLI_PACKAGE, studioRoute } from "../../lib/constants";
 

@@ -9,6 +9,6 @@ export const ROUTES = {
 export function studioRoute(id: string) { return `/studio/${id}`; }
 export function docsRoute(id: string)   { return `/docs/${id}`; }
 
-export const GITHUB_URL = "https://github.com/dano796/reart";
+export const GITHUB_URL = "https://github.com/dano796/react-algo";
 
-export const CLI_PACKAGE = "@dano796/react-reart";
+export const CLI_PACKAGE = "react-algo";

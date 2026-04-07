@@ -90,7 +90,7 @@ try {
   }
 
   const BASE_URL =
-    "https://raw.githubusercontent.com/dano796/reart/main";
+    "https://raw.githubusercontent.com/dano796/react-algo/main";
 
   const output = {
     version: "1.0.0",
